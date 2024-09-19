@@ -1,0 +1,152 @@
+:root {
+    --nedra-color: rgb(19, 77, 139);
+}
+
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url(../fonts/RobotoSlab.ttf);
+}
+
+@font-face {
+    font-family: 'RobotoMono';
+    src: url(../fonts/RobotoMono-Regular.ttf);
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+.bg-gray {
+    background-color: rgba(207, 207, 207, 0.25);
+}
+
+.bg-light {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.fc-nedra {
+    color: var(--nedra-color);
+}
+
+.stroke {
+    -webkit-text-stroke: 1px #ffffff;
+    font-size: 36pt;
+}
+
+.indent {
+    text-indent: 3ch;
+}
+
+.ta-end {
+    text-align: end;
+}
+
+.fs-10 {
+    font-size: 10pt;
+}
+
+.fs-12 {
+    font-size: 12pt;
+}
+
+.fs-14 {
+    font-size: 14pt;
+}
+
+.fs-16 {
+    font-size: 16pt;
+}
+
+.fs-18 {
+    font-size: 18pt;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: RobotoSlab;
+}
+
+body {
+    background-image: linear-gradient(rgba(244, 247, 255, 0.9), rgba(244, 247, 255, 0.9)), url("../assets/ptrn-1.jpg");
+    background-size: repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.start-block {
+    background-image: linear-gradient(rgba(244, 247, 255, 0.25), rgba(244, 247, 255, 0.85)), url("../assets/new-employee.png");
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    height: 100vh;
+}
+
+.feature-icon-small {
+    width: 3rem;
+    height: 3rem;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container img {
+    max-height: 20rem;
+    width: auto;
+    max-width: 100%;
+}
+
+.tech-list {
+    list-style-type: none; /* Убираем исходные маркеры */
+    counter-reset: my-counter; /* Задаём имя счетчика */
+}
+
+.tech-list > li {
+    margin-bottom: 0.85rem; /* Расстояние между пунктами списка */
+}
+
+.tech-list > li::before {
+    font-family: RobotoMono;
+    height: 2rem;
+    width: 2rem;
+    font-size: 14pt;
+    content: counter(my-counter) ; /* Выводим число */
+    counter-increment: my-counter; /* Увеличиваем значение счётчика */
+    background: var(--nedra-color); /* Цвет фона */
+    color: #fff; /* Белый цвет текста */
+    padding: 0.4rem 0.8rem;
+    margin-right: 0.5em;
+    border-radius: 50%;
+}
+
+.check-list {
+    list-style-type: "\1F44D";
+}
+.check-list > li::before {
+    font-size: 14pt;
+    margin-right: 1rem;
+}
+
+@media(max-width: 440px) {
+    h1 {
+        font-size: 24pt !important;
+    }
+    .block-head,
+    .col-feature,
+    .footer,
+    .ta-end {
+        text-align: center;
+    }
+    .col-feature {
+        align-items: center;
+    }
+}
