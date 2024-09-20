@@ -24,6 +24,12 @@
     background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
+.bg-nedra {
+    background: var(--nedra-color);
+    background: linear-gradient(45deg, rgba(19, 77, 139, 0.5) 0%, rgba(19, 77, 139, 0.75) 50%, rgba(19, 77, 139, 1) 100%);
+    border: var(--nedra-color);
+}
+
 .fc-nedra {
     color: var(--nedra-color);
 }
@@ -106,23 +112,30 @@ body {
 }
 
 .tech-list {
-    list-style-type: none; /* Убираем исходные маркеры */
-    counter-reset: my-counter; /* Задаём имя счетчика */
+    list-style-type: none;
+    /* Убираем исходные маркеры */
+    counter-reset: my-counter;
+    /* Задаём имя счетчика */
 }
 
-.tech-list > li {
-    margin-bottom: 0.85rem; /* Расстояние между пунктами списка */
+.tech-list>li {
+    margin-bottom: 0.85rem;
+    /* Расстояние между пунктами списка */
 }
 
-.tech-list > li::before {
+.tech-list>li::before {
     font-family: RobotoMono;
     height: 2rem;
     width: 2rem;
     font-size: 14pt;
-    content: counter(my-counter) ; /* Выводим число */
-    counter-increment: my-counter; /* Увеличиваем значение счётчика */
-    background: var(--nedra-color); /* Цвет фона */
-    color: #fff; /* Белый цвет текста */
+    content: counter(my-counter);
+    /* Выводим число */
+    counter-increment: my-counter;
+    /* Увеличиваем значение счётчика */
+    background: var(--nedra-color);
+    /* Цвет фона */
+    color: #fff;
+    /* Белый цвет текста */
     padding: 0.4rem 0.8rem;
     margin-right: 0.5em;
     border-radius: 50%;
@@ -131,21 +144,129 @@ body {
 .check-list {
     list-style-type: "\1F44D";
 }
-.check-list > li::before {
+
+.check-list>li::before {
     font-size: 14pt;
     margin-right: 1rem;
+}
+
+.ramka-2-wr {
+    width: 12rem;
+    height: 12rem;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    margin: 0.5rem auto;
+}
+
+.ramka-2-wr .ramka-2 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18pt;
+}
+
+.ramka-2-wr::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(#FFF 0%,
+            #FFF 0.5rem,
+            #BFE2FF 0.5rem,
+            #BFE2FF 0.75rem,
+            #FFF 1rem,
+            #FFF 1.5rem,
+            #BFE2FF 1.5rem,
+            #BFE2FF 2rem);
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    animation: anim-ramka-2 20s linear infinite;
+}
+
+.ramka-2-wr .ramka-2 {
+    position: relative;
+    background-color: #FFF;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 2rem;
+    text-align: center;
+    font-family: sans-serif;
+    z-index: 2;
+}
+
+.ramka-2-wr,
+.ramka-2-wr .ramka-2 {
+    box-shadow: 0 0 2px #BFE2FF, 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+@keyframes anim-ramka-2 {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: 0 20rem;
+    }
+}
+
+.ramka-5 {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ramka-5::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: #BFE2FF;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(#BFE2FF, #BFE2FF), linear-gradient(#4193db, #4193db), linear-gradient(#BFE2FF, #BFE2FF), linear-gradient(#4193db, #4193db);
+    animation: anim-ramka-5 4s linear infinite;
+}
+
+.ramka-5::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background: var(--nedra-color);
+    border-radius: 50%;
+}
+
+@keyframes anim-ramka-5 {
+    100% {
+        transform: rotate(1turn);
+    }
 }
 
 @media(max-width: 440px) {
     h1 {
         font-size: 24pt !important;
     }
+
     .block-head,
     .col-feature,
     .footer,
     .ta-end {
         text-align: center;
     }
+
     .col-feature {
         align-items: center;
     }
