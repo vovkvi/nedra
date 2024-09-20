@@ -11,14 +11,23 @@
     <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./libs/remixicon/remixicon.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/service-24.css" />
 </head>
 
 <body>
     <div class="container">
-        <div class="start-block row">
+
+        <div class="p-0 float-end" style="position: fixed; right: 0.75rem; top: 0.75rem; z-index: 99;">
+            <button type="button" class="btn btn-primary rounded-pill bg-nedra ramka-5" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop" title="Меню">
+                <i class="ri-menu-fill fs-16 m-1"></i>
+            </button>
+        </div>
+
+        <div class="start-block row" id="start">
             <div class="col-12">
                 <div class="row h-25">
-                    <div class="col-3">
+                    <div class="col-3 p-0">
                         <img src="./assets/nedra.png" alt="">
                     </div>
                 </div>
@@ -27,17 +36,17 @@
                     <div class="col-12 text-center d-flex flex-column justify-content-end">
                         <h1 class="fc-nedra stroke"><b>ПУТЕВОДИТЕЛЬ НОВОГО СОТРУДНИКА</b></h1>
                         <div class="col-12 pt-3">
-                            <a href="#greeting" type="button" class="btn btn-primary btn-lg">Начать</a>
+                            <a href="#greeting" type="button" class="btn btn-primary">Начать</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row bg-gray">
+        <div class="row bg-gray" id="greeting">
             <div class="col-12 d-flex flex-column p-3">
                 <div class="mt-1 p-1">
-                    <h3 class="block-head" id="greeting">Приветственное слово</h3>
+                    <h3 class="block-head">Приветственное слово</h3>
                 </div>
                 <hr>
                 <h3 class="mb-4 text-center fc-nedra">
@@ -79,7 +88,7 @@
             </div>
         </div>
 
-        <div class="row bg-light">
+        <div class="row bg-light" id="company">
             <div class="col-12 d-flex flex-column p-3">
                 <div class="mt-1 p-1">
                     <h3 class="block-head">О компании</h3>
@@ -138,7 +147,7 @@
             </div>
         </div>
 
-        <div class="row bg-gray">
+        <div class="row bg-gray" id="codeks">
             <div class="col-12 d-flex flex-column p-3">
                 <div class="mt-1 p-1">
                     <h3 class="block-head">Кодекс высоты</h3>
@@ -173,14 +182,14 @@
             </div>
         </div>
 
-        <div class="row bg-light">
+        <div class="row bg-light" id="work-time">
             <div class="col-12 d-flex flex-column p-3">
                 <div class="mt-1 p-1">
                     <h3 class="block-head">Рабочее время</h3>
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col-lg-4 col-md-12 text-center d-flex align-items-center justify-content-center">
+                    <div class="col-lg-4 col-md-12 text-center d-flex align-items-center justify-content-center mb-3">
                         <div class="img-container">
                             <img src="./assets/work.png" alt="work.png">
                         </div>
@@ -205,7 +214,7 @@
             </div>
         </div>
 
-        <div class="row bg-gray">
+        <div class="row bg-gray" id="vacation-time">
             <div class="col-12 d-flex flex-column p-3">
                 <div class="mt-1 p-1">
                     <h3 class="block-head">Время отдыха</h3>
@@ -233,7 +242,7 @@
                             до его начала</p>
                     </div>
                     <div
-                        class="col-lg-4 col-md-12 order-md-last order-first text-center d-flex align-items-center justify-content-center">
+                        class="col-lg-4 col-md-12 order-md-last order-first text-center d-flex align-items-center justify-content-center mb-3">
                         <div class="img-container">
                             <img src="./assets/vacation.png" alt="vacation.png">
                         </div>
@@ -242,14 +251,14 @@
             </div>
         </div>
 
-        <div class="row bg-light">
+        <div class="row bg-light" id="support">
             <div class="col-12 d-flex flex-column p-3">
                 <div class="mt-1 p-1">
                     <h3 class="block-head">Техническая поддержка</h3>
                 </div>
                 <hr>
                 <div class="row mt-2">
-                    <div class="col-lg-5 col-md-12 text-center d-flex align-items-center justify-content-center">
+                    <div class="col-lg-5 col-md-12 text-center d-flex align-items-center justify-content-center mb-3">
                         <div class="img-container">
                             <img src="./assets/hardware.png" alt="hardware.png">
                         </div>
@@ -263,7 +272,7 @@
                         <p>работа с СЭД</p>
                     </div>
                 </div>
-                <p class="fc-nedra mt-3"><b>Для подключения информационных ресурсов для Вашей работы, необходимо:</b>
+                <p class="fc-nedra mt-3"><b>Для подключения информационных ресурсов необходимо:</b>
                 </p>
                 <ol class="tech-list">
                     <li>В отделе информационной безопасности <b>(каб.9-14)</b> получить ноутбук с регламентирующими
@@ -278,7 +287,7 @@
             </div>
         </div>
 
-        <div class="row bg-gray">
+        <div class="row bg-gray" id="GID">
             <div class="col-12 d-flex flex-column p-3">
                 <div class="mt-1 p-1">
                     <h3 class="block-head">ГАЗПРОМ ГИД</h3>
@@ -324,14 +333,14 @@
             </div>
         </div>
 
-        <div class="row bg-light">
+        <div class="row bg-light" id="education">
             <div class="col-12 d-flex flex-column p-3">
                 <div class="mt-1 p-1">
                     <h3 class="block-head">Обучение и развитие</h3>
                 </div>
                 <hr>
                 <div class="row mt-2">
-                    <div class="col-lg-3 col-md-12 text-center d-flex align-items-center justify-content-center">
+                    <div class="col-lg-3 col-md-12 text-center d-flex align-items-center justify-content-center mb-3">
                         <div class="img-container">
                             <img src="./assets/education.png" alt="education.png">
                         </div>
@@ -351,7 +360,7 @@
             </div>
         </div>
 
-        <div class="row bg-gray">
+        <div class="row bg-gray" id="sick">
             <div class="col-12 d-flex flex-column p-3">
                 <div class="mt-1 p-1">
                     <h3 class="block-head">Заболели?</h3>
@@ -376,14 +385,14 @@
                         <p>При получении листка нетрудоспособности на руки убедитесь в корректности его заполнения.</p>
                     </div>
                     <div
-                        class="col-lg-4 col-md-12 order-md-last order-first text-center d-flex align-items-center justify-content-center">
+                        class="col-lg-4 col-md-12 order-md-last order-first text-center d-flex align-items-center justify-content-center mb-3">
                         <div class="img-container">
                             <img src="./assets/pain.png" alt="pain.png">
                         </div>
                     </div>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-lg-5 col-md-12 text-center d-flex align-items-center justify-content-center">
+                    <div class="col-lg-5 col-md-12 text-center d-flex align-items-center justify-content-center mb-3">
                         <div class="img-container">
                             <img src="./assets/send.png" alt="send.png">
                         </div>
@@ -410,7 +419,7 @@
             </div>
         </div>
 
-        <div class="row bg-light">
+        <div class="row bg-light" id="travel">
             <div class="col-12 d-flex flex-column p-3">
                 <div class="mt-1 p-1">
                     <h3 class="block-head">Едем в командировку</h3>
@@ -436,7 +445,7 @@
                             проживание самостоятельно или же отметить, что необходимо это сделать централизованно.</p>
                     </div>
                     <div
-                        class="col-lg-4 col-md-12 order-md-last order-first text-center d-flex align-items-center justify-content-center">
+                        class="col-lg-4 col-md-12 order-md-last order-first text-center d-flex align-items-center justify-content-center mb-3">
                         <div class="img-container">
                             <img src="./assets/travel.png" alt="travel.png">
                         </div>
@@ -444,7 +453,8 @@
                 </div>
                 <p>Для заказа дополнительных командировочных расходов Заходим на корпоративный портал в раздел:
                     <b>Заявки > Подать заявку > HR-сервисы > Заявки по командировкам</b> и заполняем специальную форму.
-                    Форма подскажет, какие поля обязательные и не даст ввести неверную информацию.</p>
+                    Форма подскажет, какие поля обязательные и не даст ввести неверную информацию.
+                </p>
                 <br>
                 <p class="fc-nedra"><b>Отчитываемся после командировки:</b></p>
                 <br>
@@ -481,14 +491,14 @@
             </div>
         </div>
 
-        <div class="row bg-gray">
+        <div class="row bg-gray" id="science">
             <div class="col-12 d-flex flex-column p-3">
                 <div class="mt-1 p-1">
                     <h3 class="block-head">Совет молодых ученых и специалистов</h3>
                 </div>
                 <hr>
                 <div class="row mt-2">
-                    <div class="col-lg-4 col-md-12 text-center d-flex align-items-center justify-content-center">
+                    <div class="col-lg-4 col-md-12 text-center d-flex align-items-center justify-content-center mb-3">
                         <div class="img-container">
                             <img src="./assets/molod.png" alt="molod.png">
                         </div>
@@ -500,7 +510,6 @@
                             компаний «Газпром».</p>
                         <p>В рамках деятельности Совета молодых специалистов реализуются мероприятия по следующим
                             направлениям:</p>
-                        <br>
                         <ul>
                             <li>инновационное и профессиональное развитие;</li>
                             <li>развитие спортивной культуры;</li>
@@ -525,7 +534,8 @@
                     <p class="text-body-secondary fs-10">
                         2024 © Виталий Вовк
                         <br>
-                        <i class="ri-github-fill"></i><a href="https://vovkvi.github.io/" class="mx-2">vovkvi.github.io</a>
+                        <i class="ri-github-fill"></i><a href="https://vovkvi.github.io/"
+                            class="mx-2">vovkvi.github.io</a>
                         <br>
                         <i class="ri-at-line"></i><a class="mx-2"
                             href="mailto:vitalii.social@mail.ru">vitalii.social@mail.ru</a>
@@ -537,7 +547,8 @@
                         <br>
                         г.Санкт-Петербург, ул.Внуковская, д.2, лит.А
                         <br>
-                        <i class="ri-at-line mx-2"></i><a href="mailto:office@nedra.gazprom.ru">office@nedra.gazprom.ru</a>
+                        <i class="ri-at-line mx-2"></i><a
+                            href="mailto:office@nedra.gazprom.ru">office@nedra.gazprom.ru</a>
                     </p>
                 </div>
             </div>
@@ -545,7 +556,171 @@
 
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Газпром Недра</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="py-5 service-24">
+                        <div class="container">
+                            <!-- Row -->
+                            <div class="row wrap-service-24">
+                                <!-- Column -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="card rounded card-shadow border-0 mb-4">
+                                        <a href="#start"
+                                            class="card-hover py-4 text-center d-block rounded">
+                                            <span class="bg-success-grediant">Начало</span>
+                                            <h6 class="ser-title">Точка отправления</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="card rounded card-shadow border-0 mb-4">
+                                        <a href="#greeting"
+                                            class="card-hover py-4 text-center d-block rounded">
+                                            <span class="bg-success-grediant">Привет!</span>
+                                            <h6 class="ser-title">Вступительное слово</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="card card-shadow border-0 mb-4">
+                                        <a href="#company"
+                                            class="card-hover py-4 text-center d-block rounded">
+                                            <span class="bg-success-grediant">О нас</span>
+                                            <h6 class="ser-title">Информация о компании</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="card card-shadow border-0 mb-4">
+                                        <a href="#codeks"
+                                            class="card-hover py-4 text-center d-block rounded">
+                                            <span class="bg-success-grediant">Кодекс</span>
+                                            <h6 class="ser-title">Несколько простых советов</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="card card-shadow border-0 mb-4">
+                                        <a href="#work-time"
+                                            class="card-hover py-4 text-center d-block rounded">
+                                            <span class="bg-success-grediant">Работа</span>
+                                            <h6 class="ser-title">Рабочее время и перерыв</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="card card-shadow border-0 mb-4">
+                                        <a href="#vacation-time"
+                                            class="card-hover py-4 text-center d-block rounded">
+                                            <span class="bg-success-grediant">Отпуск</span>
+                                            <h6 class="ser-title">Информация об отпусках</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="card card-shadow border-0 mb-4">
+                                        <a href="#support"
+                                            class="card-hover py-4 text-center d-block rounded">
+                                            <span class="bg-success-grediant">Поддержка</span>
+                                            <h6 class="ser-title">Техническая поддержка</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="card card-shadow border-0 mb-4">
+                                        <a href="#GID"
+                                            class="card-hover py-4 text-center d-block rounded">
+                                            <span class="bg-success-grediant">ГИД</span>
+                                            <h6 class="ser-title">Сервис ГАЗПРОМ ГИД</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="card card-shadow border-0 mb-4">
+                                        <a href="#education"
+                                            class="card-hover py-4 text-center d-block rounded">
+                                            <span class="bg-success-grediant">Учеба</span>
+                                            <h6 class="ser-title">Обучение и развитие</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="card card-shadow border-0 mb-4">
+                                        <a href="#sick"
+                                            class="card-hover py-4 text-center d-block rounded">
+                                            <span class="bg-success-grediant">Здоровье</span>
+                                            <h6 class="ser-title">Оформление больничного листа</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="card card-shadow border-0 mb-4">
+                                        <a href="#travel"
+                                            class="card-hover py-4 text-center d-block rounded">
+                                            <span class="bg-success-grediant">Разъезды</span>
+                                            <h6 class="ser-title">Оформление командировок</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="card card-shadow border-0 mb-4">
+                                        <a href="#science"
+                                            class="card-hover py-4 text-center d-block rounded">
+                                            <span class="bg-success-grediant">Наука</span>
+                                            <h6 class="ser-title">Совет молодых специалистов</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-3 text-center">
+                                    <a href="https://nedra.gazprom.ru/" class="btn btn-outline-success btn-md">
+                                        <span>Открыть внешний портал &quot;Газпром Недра&quot;</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+            let triggers = document.querySelectorAll('.card-hover');
+            triggers.forEach((e) => {
+                e.addEventListener('click', () => {
+                    myModal.hide();
+                })
+            })
+        });
+    </script>
+
 </body>
 
 </html>
