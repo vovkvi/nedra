@@ -1,0 +1,84 @@
+.nedra-menu {
+    color: #8d97ad;
+    font-weight: 300;
+}
+
+.nedra-menu h1,
+.nedra-menu h2,
+.nedra-menu h3,
+.nedra-menu h4,
+.nedra-menu h5,
+.nedra-menu h6 {
+    color: #3e4555;
+}
+
+.nedra-menu .card.card-shadow {
+    -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.nedra-menu a {
+    text-decoration: none;
+}
+
+.nedra-menu .card-hover:hover {
+    background: #1d7dcc;
+    background: -webkit-linear-gradient(legacy-direction(to right), #2ca5dd 0%, #1d7dcc 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#2ca5dd), to(#1d7dcc));
+    background: -webkit-linear-gradient(left, #2ca5dd 0%, #1d7dcc 100%);
+    background: -o-linear-gradient(left, #2ca5dd 0%, #1d7dcc 100%);
+    background: linear-gradient(to right, #2ca5dd 0%, #1d7dcc 100%);
+}
+
+.nedra-menu .card-hover:hover .bg-success-grediant {
+    color: #ffffff;
+    text-fill-color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+}
+
+.nedra-menu .card-hover:hover .ser-title {
+    color: #ffffff;
+}
+
+.nedra-menu .bg-success-grediant {
+    background: #1d7dcc;
+    background: -webkit-linear-gradient(legacy-direction(to right), #2ca5dd 0%, #1d7dcc 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#2ca5dd), to(#1d7dcc));
+    background: -webkit-linear-gradient(left, #2ca5dd 0%, #1d7dcc 100%);
+    background: -o-linear-gradient(left, #2ca5dd 0%, #1d7dcc 100%);
+    background: linear-gradient(to right, #2ca5dd 0%, #1d7dcc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    font-size: 28pt;
+}
+
+.nedra-menu .wrap-nedra-menu .card {
+    -o-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+}
+
+.nedra-menu .wrap-nedra-menu .card:hover {
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+}
+
+.nedra-menu .btn-outline-success {
+    color: #1d7dcc !important;
+    background-color: transparent;
+    border-color: #1d7dcc;
+}
+
+.nedra-menu .btn-outline-success:hover {
+    background: #1d7dcc;
+    border-color: #1d7dcc;
+    color: #ffffff !important;
+}
+
+.nedra-menu .btn-md {
+    padding: 15px 45px;
+    font-size: 16px;
+}
