@@ -89,7 +89,7 @@ body {
 }
 
 .start-block {
-    background-image: linear-gradient(rgba(244, 247, 255, 0.15), rgba(244, 247, 255, 0.65)), url("../assets/new-employee.png");
+    background-image: linear-gradient(rgba(244, 247, 255, 0.25), rgba(244, 247, 255, 0.85)), url("../assets/new-employee.png");
     background-position: center;
     background-size: cover;
     width: auto;
