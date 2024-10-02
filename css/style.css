@@ -1,5 +1,6 @@
 :root {
     --nedra-color: rgb(19, 77, 139);
+    --nedra-color-2: #BFE2FF;
 }
 
 @font-face {
@@ -59,6 +60,10 @@
     font-size: 14pt;
 }
 
+.fs-15 {
+    font-size: 15pt;
+}
+
 .fs-16 {
     font-size: 16pt;
 }
@@ -89,7 +94,8 @@ body {
 }
 
 .start-block {
-    background-image: linear-gradient(rgba(244, 247, 255, 0.25), rgba(244, 247, 255, 0.85)), url("../assets/new-employee.png");
+    background-image: linear-gradient(rgba(244, 247, 255, 0.5), rgba(244, 247, 255, 0.85)), url("../assets/svg/team.svg");
+    /* background-image: linear-gradient(rgba(244, 247, 255, 0.5), rgba(244, 247, 255, 0.85)), url("../assets/nedra-poster.png"); */
     background-position: center;
     background-size: cover;
     width: auto;
@@ -106,9 +112,20 @@ body {
 }
 
 .img-container img {
-    max-height: 20rem;
+    max-height: 24rem;
     width: auto;
-    max-width: 100%;
+    max-width: 100% !important;
+}
+
+.icon-background {
+    color: var(--nedra-color);
+}
+.icon-background::before {
+    background-color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--nedra-color);
+    margin-right: 0.25rem;
 }
 
 .tech-list {
