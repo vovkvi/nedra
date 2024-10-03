@@ -72,6 +72,10 @@
     font-size: 18pt;
 }
 
+.br-b {
+    border-bottom: 1px solid rgba(33, 37, 41, 0.25);
+}
+
 *,
 *::before,
 *::after {
@@ -95,7 +99,6 @@ body {
 
 .start-block {
     background-image: linear-gradient(rgba(244, 247, 255, 0.5), rgba(244, 247, 255, 0.85)), url("../assets/svg/team.svg");
-    /* background-image: linear-gradient(rgba(244, 247, 255, 0.5), rgba(244, 247, 255, 0.85)), url("../assets/nedra-poster.png"); */
     background-position: center;
     background-size: cover;
     width: auto;
@@ -117,6 +120,34 @@ body {
     max-width: 100% !important;
 }
 
+.step-container {
+    padding: 0;
+    border-left: 2px solid rgba(33, 37, 41, 0.25);
+    margin-left: 1rem;
+}
+.step-container > .step-move {
+    margin-left: -1.3rem;
+}
+
+.div-background,
+.div-background-empty {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+}
+
+.div-background {
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid var(--nedra-color);
+}
+
 .icon-background {
     color: var(--nedra-color);
 }
@@ -126,107 +157,6 @@ body {
     border-radius: 50%;
     border: 2px solid var(--nedra-color);
     margin-right: 0.25rem;
-}
-
-.tech-list {
-    list-style-type: none;
-    /* Убираем исходные маркеры */
-    counter-reset: my-counter;
-    /* Задаём имя счетчика */
-}
-
-.tech-list>li {
-    margin-bottom: 0.85rem;
-    /* Расстояние между пунктами списка */
-}
-
-.tech-list>li::before {
-    font-family: RobotoMono;
-    height: 2rem;
-    width: 2rem;
-    font-size: 14pt;
-    content: counter(my-counter);
-    /* Выводим число */
-    counter-increment: my-counter;
-    /* Увеличиваем значение счётчика */
-    background: var(--nedra-color);
-    /* Цвет фона */
-    color: #fff;
-    /* Белый цвет текста */
-    padding: 0.4rem 0.8rem;
-    margin-right: 0.5em;
-    border-radius: 50%;
-}
-
-.check-list {
-    list-style-type: "\1F44D";
-}
-
-.check-list>li::before {
-    font-size: 14pt;
-    margin-right: 1rem;
-}
-
-.ramka-2-wr {
-    width: 12rem;
-    height: 12rem;
-    box-sizing: border-box;
-    padding: 0.5rem;
-    position: relative;
-    overflow: hidden;
-    margin: 0.5rem auto;
-}
-
-.ramka-2-wr .ramka-2 {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18pt;
-}
-
-.ramka-2-wr::before {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: repeating-linear-gradient(#FFF 0%,
-            #FFF 0.5rem,
-            #BFE2FF 0.5rem,
-            #BFE2FF 0.75rem,
-            #FFF 1rem,
-            #FFF 1.5rem,
-            #BFE2FF 1.5rem,
-            #BFE2FF 2rem);
-    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-    animation: anim-ramka-2 20s linear infinite;
-}
-
-.ramka-2-wr .ramka-2 {
-    position: relative;
-    background-color: #FFF;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 2rem;
-    text-align: center;
-    font-family: sans-serif;
-    z-index: 2;
-}
-
-.ramka-2-wr,
-.ramka-2-wr .ramka-2 {
-    box-shadow: 0 0 2px #BFE2FF, 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
-
-@keyframes anim-ramka-2 {
-    from {
-        background-position: 0;
-    }
-
-    to {
-        background-position: 0 20rem;
-    }
 }
 
 .ramka-5 {
